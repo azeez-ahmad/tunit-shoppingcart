@@ -1,7 +1,6 @@
 package com.rsys.tunitshoppingcart.dto;
 
 
-import com.rsys.tunitshoppingcart.entity.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
