@@ -20,6 +20,12 @@ public class ProductController {
         this.productRepository = productRepository;
     }
 
+    /**
+     * This method is used to list all the products
+     * @return list of products
+     * @author rsys azeez
+     *
+     */
     @GetMapping
     public List<Product> getProducts() {
         return productRepository.findAll();
