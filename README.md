@@ -1,6 +1,16 @@
 # Assessment RSystems
 
 
+## H2 Database client information
+To connect to the H2 database, use the following information:
+Type the following URL in the browser: http://localhost:8080/h2-console
+* JDBC URL: jdbc:h2:mem:mydb
+* User Name: sa
+* Password: password
+
+Then press the Connect button.
+
+
 ## List all products in the database
 
 ```bash
