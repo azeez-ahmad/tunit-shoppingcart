@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tunit-shoppingcart-service
+  labels:
+    app: tunit-shoppingcart
+spec:
+  selector:
+    app: tunit-shoppingcart
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      nodePort: 30080
+  type: NodePort
+

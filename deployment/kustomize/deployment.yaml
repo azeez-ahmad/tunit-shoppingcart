@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tunit-shoppingcart
+  labels:
+    app: tunit-shoppingcart
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tunit-shoppingcart
+  template:
+    metadata:
+      labels:
+        app: tunit-shoppingcart
+    spec:
+      containers:
+        - name: tunit-shoppingcart
+          image: azeiz/tunit-shoppingcart:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_CONFIG_NAME
+              value: application
+          resources:
+            requests:
+              cpu: "128m"
+              memory: "128Mi"
+            limits:
+              cpu: "256m"
+              memory: "256Mi"
